@@ -1,0 +1,3 @@
+Hello this is included inside the .gitignore file so whatever is added into this will
+not be tracked by the git.
+Here the private API keys, password could be kept securely.
