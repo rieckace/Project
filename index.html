@@ -3,104 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Customer Login Form</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-yH4H+8+5Uv5+UWx4Bt+U4rJZy5hZVqkzWqSzKPvAB5fLkh3YB2xhRM4Q0P5UfYg1hFg1UPW/NphOzQWqygrsUg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <title>Sunrise Café</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .login-container {
-      background-color: #ffffff;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      max-width: 350px;
-      animation: fadeIn 0.5s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
+      font-family: 'Poppins', sans-serif;
+      background: #fff8f0;
       color: #333;
     }
 
-    .form-group {
-      position: relative;
-      margin-bottom: 20px;
+    header {
+      background: #ffb347;
+      padding: 20px;
+      text-align: center;
+      color: white;
     }
 
-    .form-group i {
-      position: absolute;
-      top: 12px;
-      left: 10px;
-      color: #999;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
 
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px 35px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
     }
 
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #6c63ff;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .cta-button {
+      padding: 10px 20px;
+      background-color: #ff7e5f;
       border: none;
       color: white;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: 4px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      margin-top: 20px;
     }
 
-    button:hover {
-      background-color: #5851db;
+    .cta-button:hover {
+      background-color: #ff6f50;
     }
 
-    @media (max-width: 400px) {
-      .login-container {
-        padding: 30px 20px;
-      }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
     }
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Customer Login</h2>
-    <form action="/login" method="POST">
-      <div class="form-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" name="email" placeholder="Email Address" required />
-      </div>
-      <div class="form-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" name="password" placeholder="Password" required />
-      </div>
-      <button type="submit">Login</button>
-    </form>
-  </div>
+  <header>
+    <h1>Sunrise Café</h1>
+    <p>Your morning, made better.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Fresh Brews, Friendly Vibes</h2>
+    <p>Come in for a cup of our finest coffee and stay for the comfort.</p>
+    <button class="cta-button">View Menu</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Sunrise Café. All rights reserved.
+  </footer>
 </body>
 </html>
