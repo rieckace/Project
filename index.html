@@ -3,63 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sunrise Café</title>
+  <title>DreamScape Studio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fff8f0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfcfb;
       color: #333;
     }
 
     header {
-      background: #ffb347;
-      padding: 20px;
-      text-align: center;
-      color: white;
+      position: fixed;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px 0;
+      z-index: 999;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
-    }
-
-    nav {
-      background: #333;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px;
+      font-size: 1.8em;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-weight: 500;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #ffa07a;
     }
 
     section {
-      padding: 40px;
+      padding: 100px 20px;
+      min-height: 100vh;
       text-align: center;
     }
 
-    .cta-button {
-      padding: 10px 20px;
-      background-color: #ff7e5f;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 20px;
+    #home {
+      background: #ffe4e1;
     }
 
-    .cta-button:hover {
-      background-color: #ff6f50;
+    #about {
+      background: #fafad2;
+    }
+
+    #services {
+      background: #e0ffff;
+    }
+
+    #contact {
+      background: #f5f5dc;
     }
 
     footer {
@@ -72,25 +76,38 @@
 </head>
 <body>
   <header>
-    <h1>Sunrise Café</h1>
-    <p>Your morning, made better.</p>
+    <h1>DreamScape Studio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Menu</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <section id="home">
+    <h2>Welcome to DreamScape</h2>
+    <p>We turn your dreams into dazzling visuals.</p>
+  </section>
 
-  <section>
-    <h2>Fresh Brews, Friendly Vibes</h2>
-    <p>Come in for a cup of our finest coffee and stay for the comfort.</p>
-    <button class="cta-button">View Menu</button>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We're a team of creatives obsessed with storytelling and design.</p>
+  </section>
+
+  <section id="services">
+    <h2>What We Offer</h2>
+    <p>Branding, Web Design, Photography, Motion Graphics & more.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: hello@dreamscape.studio</p>
+    <p>Location: Pollachi, India</p>
   </section>
 
   <footer>
-    &copy; 2025 Sunrise Café. All rights reserved.
+    &copy; 2025 DreamScape Studio. All rights reserved.
   </footer>
 </body>
 </html>
