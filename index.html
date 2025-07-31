@@ -4,63 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Customer Login Form</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-yH4H+8+5Uv5+UWx4Bt+U4rJZy5hZVqkzWqSzKPvAB5fLkh3YB2xhRM4Q0P5UfYg1hFg1UPW/NphOzQWqygrsUg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
+
     .login-container {
       background-color: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 350px;
+      animation: fadeIn 0.5s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     h2 {
       text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      position: relative;
       margin-bottom: 20px;
     }
-    label {
-      display: block;
-      margin-bottom: 5px;
+
+    .form-group i {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      color: #999;
     }
+
     input[type="email"],
     input[type="password"] {
       width: 100%;
-      padding: 8px;
-      margin-bottom: 15px;
+      padding: 10px 35px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
+      font-size: 14px;
     }
+
     button {
       width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
+      padding: 12px;
+      background-color: #6c63ff;
       border: none;
       color: white;
       font-size: 16px;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
+
     button:hover {
-      background-color: #45a049;
+      background-color: #5851db;
+    }
+
+    @media (max-width: 400px) {
+      .login-container {
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="login-container">
-    <h2>Customer Login Form</h2>
+    <h2>Customer Login</h2>
     <form action="/login" method="POST">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter the mail Id" required />
-
-      <label for="password" >Password</label>
-      <input type="password" id="password" name="password" required  placeholder="Enter your password"/>
-
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" placeholder="Email Address" required />
+      </div>
+      <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
       <button type="submit">Login</button>
     </form>
   </div>
